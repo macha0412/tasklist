@@ -41,7 +41,7 @@ public class DestroyServlet extends HttpServlet {
                 em.getTransaction().commit();
                 em.close();
 
-                request.getSession().removeAttribute("message_id");
+                request.getSession().removeAttribute("task_id");
 
                 response.sendRedirect(request.getContextPath() + "/index");
             }
